@@ -1,0 +1,113 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: enterprise-ai-web
+
+
+  datasource:
+    url: jdbc:mysql://172.20.109.52:3361/crmdb?characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useUnicode=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&allowMultiQueries=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ptcrm
+    password: Ptcrm@2024
+
+
+  ai:
+
+    agent:
+      name: enterprise-assistant
+      version: 1.0.0
+      description: 企业智能问答助手
+
+
+    # 大模型
+    ollama:
+      base-url: http://localhost:11434
+
+      chat:
+        options:
+          model: qwen2.5:3b
+          temperature: 0.3
+          num-predict: 256
+          num-ctx: 4096
+
+
+      # 注意：
+      # text-embedding-v2 是阿里DashScope模型
+      # 如果使用Ollama，需要替换成Ollama embedding模型
+      embedding:
+        options:
+          model: nomic-embed-text
+
+
+
+    # 向量库
+    vectorstore:
+      milvus:
+        host: localhost
+        port: 19530
+        collection-name: knowledge
+        initialize-schema: true
+        # Spring AI 1.0.7 默认把维度写死成 1536，必须显式覆盖为
+        # 当前 embedding 模型(nomic-embed-text)的真实维度，否则建出的
+        # collection 仍是 1536，插入 768 维向量时报维度不一致错误
+        embedding-dimension: 768
+
+
+
+    # MCP Client
+    # 当前web服务连接mcp-gateway
+    mcp:
+      client:
+        sse:
+          connections:
+            gateway:
+              url: http://localhost:8082
+
+
+
+# 网络搜索
+internet:
+  websearch:
+    url: http://localhost:6080/search
+    counts: 25
+
+
+
+# MCP Gateway地址
+# 如果web代码通过HTTP调用gateway，可使用
+mcp:
+  gateway:
+    url: http://localhost:8082
+
+
+
+# MyBatis Plus
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+
+  type-aliases-package: com.jam.demo.entity
+
+  configuration:
+    map-underscore-to-camel-case: true
+
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+  global-config:
+    db-config:
+      id-type: auto
+
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+
+# 日志
+logging:
+  level:
+    root: INFO
+    org.springframework.ai: INFO
+    org.springframework.ai.mcp: INFO
