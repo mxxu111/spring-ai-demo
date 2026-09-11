@@ -1,0 +1,15 @@
+ai\agent\entity\AgentTraceEntity.class
+ai\agent\service\TaskPersistenceService.class
+ai\agent\mapper\ChatHistoryMapper.class
+ai\agent\entity\TokenUsageEntity.class
+ai\agent\mapper\TaskMapper.class
+ai\agent\entity\ChatHistoryEntity.class
+ai\agent\entity\TaskEntity.class
+ai\agent\entity\ToolCallEntity.class
+ai\agent\entity\ChatEntity.class
+ai\agent\service\impl\ChatHistoryServiceImpl.class
+ai\agent\entity\StepEntity.class
+ai\agent\entity\ConversationEntity.class
+ai\agent\mapper\StepMapper.class
+ai\agent\entity\AgentMemoryEntity.class
+ai\agent\service\ChatHistoryService.class

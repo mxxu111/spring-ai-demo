@@ -1,0 +1,15 @@
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\AgentMemoryEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\AgentTraceEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\ChatEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\ChatHistoryEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\ConversationEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\StepEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\TaskEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\TokenUsageEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\entity\ToolCallEntity.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\impl\ChatHistoryServiceImpl.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\mapper\ChatHistoryMapper.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\mapper\StepMapper.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\mapper\TaskMapper.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\service\ChatHistoryService.java
+D:\workspace\mcp\agent-persistence\src\main\java\ai\agent\service\TaskPersistenceService.java
