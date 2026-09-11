@@ -1,0 +1,16 @@
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\Agent.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\enums\AgentType.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\enums\TaskStatus.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\exception\AgentException.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\Action.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\AgentContext.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\AgentResult.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\Observation.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\Plan.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\Step.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\Task.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\Thought.java
+D:\workspace\mcp\agent-api\src\main\java\ai\agent\model\ToolDefinition.java
+D:\workspace\mcp\agent-api\src\main\java\ai\enums\ChatMode.java
+D:\workspace\mcp\agent-api\src\main\java\ai\enums\ModelProvider.java
+D:\workspace\mcp\agent-api\src\main\java\ai\enums\SSEMsgType.java
