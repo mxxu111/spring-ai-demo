@@ -1,0 +1,48 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: mcp-gateway-service
+
+  # Spring AI MCP Client 配置
+  ai:
+    mcp:
+      client:
+        request-timeout: 60s
+        sse:
+          connections:
+            # MCP Server (包含 EmailTool)
+            mcp-server:
+              url: http://localhost:8080
+      server:
+        name: mcp-gateway
+        version: 1.0.0
+        type: SYNC
+
+# MCP Gateway 配置
+mcp:
+  gateway:
+    servers:
+      mcp-server:
+        name: mcp-server
+        url: http://localhost:8080
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    ai.agent.gateway: DEBUG
+    org.springframework.ai.mcp: DEBUG
+  file:
+    name: logs/mcp-gateway.log
+
+# 管理端点配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
